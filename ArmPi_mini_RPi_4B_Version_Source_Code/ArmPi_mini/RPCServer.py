@@ -70,12 +70,16 @@ def SetPWMServo(*args, **kwargs):
 @dispatcher.add_method
 def MoveArmToPosition(x, y, z, movetime):
     """Move arm end to position using inverse kinematics"""
-    AK = ArmIK()
-    # result = arm.setPitchRanges((x, y, z), servo6_angle)
-    if result:
+    ret = (True, (), 'MoveArmToPosition')
+    try:
+        AK = ArmIK()
+        # result = arm.setPitchRanges((x, y, z), servo6_angle)
         AK.setPitchRangeMoving((x, y, z), 0,-90, 90, movetime)
-        return (True, result, 'MoveArmToPosition')
-    return (False, "Position not reachable", 'MoveArmToPosition')
+    except Exception as e:
+        print('error3:', e)
+        ret = (False, "Position not reachable", 'MoveArmToPosition')
+    return ret
+
 
 @dispatcher.add_method
 def SetBusServoPulse(*args, **kwargs):
