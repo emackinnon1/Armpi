@@ -49,7 +49,7 @@ if __name__ == "__main__":
         else:
             if servo_test:
                 servo_test = False
-                os.system("python3 /home/pi/ArmPi_mini/HiwonderSDK/Servo_test.py")
+                os.system("python3 /home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/HiwonderSDK/Servo_test.py")
                     
             count = 0
             if not key1_pressed:
