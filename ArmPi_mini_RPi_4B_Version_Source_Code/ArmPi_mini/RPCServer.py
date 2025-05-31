@@ -2,7 +2,7 @@
 # coding=utf8
 import os
 import sys
-sys.path.append('/home/pi/ArmPi_mini/')
+sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code//ArmPi_mini/')
 import time
 import logging
 import threading
@@ -66,6 +66,16 @@ def SetPWMServo(*args, **kwargs):
         print('error3:', e)
         ret = (False, __RPC_E03, 'SetPWMServo')
     return ret
+
+@dispatcher.add_method
+def MoveArmToPosition(x, y, z, movetime):
+    """Move arm end to position using inverse kinematics"""
+    AK = ArmIK()
+    # result = arm.setPitchRanges((x, y, z), servo6_angle)
+    if result:
+        AK.setPitchRangeMoving((x, y, z), 0,-90, 90, movetime)
+        return (True, result, 'MoveArmToPosition')
+    return (False, "Position not reachable", 'MoveArmToPosition')
 
 @dispatcher.add_method
 def SetBusServoPulse(*args, **kwargs):

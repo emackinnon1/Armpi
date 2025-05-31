@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # coding=utf8
 import sys
-sys.path.append('/home/pi/ArmPi_mini/')
+sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/')
 import cv2
 import time
 import math

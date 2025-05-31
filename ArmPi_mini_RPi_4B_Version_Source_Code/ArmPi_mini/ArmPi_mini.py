@@ -29,7 +29,7 @@ def startMiniPi():
     threading.Thread(target=MjpgServer.startMjpgServer,
                      daemon=True).start()  # mjpg streaming server
     
-    loading_picture = cv2.imread('/home/pi/ArmPi_mini/CameraCalibration/loading.jpg')
+    loading_picture = cv2.imread('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code//ArmPi_mini/CameraCalibration/loading.jpg')
     cam = Camera.Camera()  # camera read 
     cam.camera_open()
     Running.cam = cam

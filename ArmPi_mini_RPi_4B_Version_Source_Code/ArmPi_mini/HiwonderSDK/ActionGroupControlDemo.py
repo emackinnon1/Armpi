@@ -17,6 +17,6 @@ Tips:
 ----------------------------------------------------------
 ''')
 
-# Action group needs to be stored in /home/pi/ArmPi_mini/ActionGroups
+# Action group needs to be stored in /home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/ActionGroups
 AGC.runAction('1')  # Parameter is the name of action group. suffix is not included 
 AGC.runAction('2')

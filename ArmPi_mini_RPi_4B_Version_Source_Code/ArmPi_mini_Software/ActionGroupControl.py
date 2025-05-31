@@ -5,7 +5,7 @@ import time
 import threading
 import sqlite3 as sql
 from SetPWMServo import *
-sys.path.append('/home/pi/ArmPi_mini/')
+sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/')
 import yaml_handle
 
 runningAction = False
@@ -27,7 +27,7 @@ def runAction(actNum):
     global online_action_times
     if actNum is None:
         return
-    actNum = "/home/pi/ArmPi_mini/ActionGroups/" + actNum + ".d6a"
+    actNum = "/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/ActionGroups/" + actNum + ".d6a"
     stopRunning = False
     if os.path.exists(actNum) is True:
         if runningAction is False:

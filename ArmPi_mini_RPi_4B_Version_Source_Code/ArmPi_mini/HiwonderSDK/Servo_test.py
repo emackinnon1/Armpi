@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 # coding=utf8
 import sys
-sys.path.append('/home/pi/ArmPi_mini/')
+sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/')
 import time
-import HiwonderSDK.Board as Board
+from Board import Board
 
 if sys.version_info.major == 2:
     print('Please run this program with python3!')

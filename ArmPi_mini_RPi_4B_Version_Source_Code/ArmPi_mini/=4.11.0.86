@@ -1,0 +1,4 @@
+Note: Dependent package 'numpy' contains 2 apps
+  - f2py
+  - numpy-config
+

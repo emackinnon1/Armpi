@@ -1,0 +1,16 @@
+[project]
+name = "armpi-mini"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "json-rpc>=1.15.0",
+    "matplotlib>=3.10.3",
+    "opencv-python>=4.11.0.86",
+    "pyyaml>=6.0.2",
+    "rpi-gpio>=0.7.1",
+    "rpi-ws281x>=5.0.0",
+    "smbus2>=0.5.0",
+    "werkzeug>=3.1.3",
+]
