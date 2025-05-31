@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
+# !/.venv/bin/python
 import os
 import sys
-sys.path.append('/home/pi/ArmPi_mini/')
 import time
 import yaml_handle
 import RPi.GPIO as GPIO
@@ -36,10 +35,10 @@ __RGB_BRIGHTNESS = 120
 __RGB_CHANNEL = 0
 __RGB_INVERT = False
 RGB = PixelStrip(__RGB_COUNT, __RGB_PIN, __RGB_FREQ_HZ, __RGB_DMA, __RGB_INVERT, __RGB_BRIGHTNESS, __RGB_CHANNEL)
-RGB.begin()
-for i in range(RGB.numPixels()):
-    RGB.setPixelColor(i, PixelColor(0,0,0))
-    RGB.show()
+# RGB.begin()
+# for i in range(RGB.numPixels()):
+    # RGB.setPixelColor(i, PixelColor(0,0,0))
+    # RGB.show()
 
 def setMotor(index, speed):
     if index < 1 or index > 4:

@@ -2,7 +2,7 @@
 # encoding:utf-8
 import sys
 import time
-sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code//ArmPi_mini/')
+sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/')
 from ArmIK.ArmMoveIK import *
 
 if sys.version_info.major == 2:

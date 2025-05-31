@@ -23,7 +23,7 @@ from PyQt5.QtWidgets import *
 from ArmPi_miniUi import Ui_Form
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
-sys.path.append('/home/pi/ArmPi_mini/')
+sys.path.append('/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/')
 from ArmIK.ArmMoveIK import *
 AK = ArmIK()
 
@@ -36,11 +36,11 @@ class MainWindow(QtWidgets.QWidget, Ui_Form):
         self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)  # set to select the whole line. if not, it will default to select the table cell
         self.message = QMessageBox()
         self.resetServos_ = False
-        self.path = '/home/pi/ArmPi_mini/'
+        self.path = '/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/'
         self.actdir = self.path + "ActionGroups/"
         self.button_controlaction_clicked('reflash')
         ########################main interface###############################
-        self.path = '/home/pi/ArmPi_mini/yaml/'
+        self.path = '/home/emackinnon1/Projects/Armpi/ArmPi_mini_RPi_4B_Version_Source_Code/ArmPi_mini/yaml/'
         self.lab_file = 'lab_config.yaml'
         self.Deviation_file = 'Deviation.yaml'
         self.PickingCoordinates_file = 'PickingCoordinates.yaml'
