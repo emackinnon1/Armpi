@@ -38,7 +38,7 @@ if __name__ == "__main__":
     AK.setPitchRangeMoving((0, 6, 18), 0,-90, 90, 1500) # Set the initial position of robot ram as (x:0, y:6, z:18), and the running time as 1500ms.
     time.sleep(1.5) # Delay 1.5s
     
-    for i in range(2): # Run for cycle two times 
+    for i in range(6): # Run for cycle two times 
         AK.setPitchRangeMoving((0, 6, 22), 0,-90, 90, 1000) # The robot arm is set to move up to the position (x:0, y:6, z:22) and the running time is set as 1000ms 
         time.sleep(1.2) # Delay 1.2s 
         

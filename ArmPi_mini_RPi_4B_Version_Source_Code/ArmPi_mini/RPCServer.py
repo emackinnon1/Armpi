@@ -68,12 +68,27 @@ def SetPWMServo(*args, **kwargs):
     return ret
 
 @dispatcher.add_method
-def MoveArmToPosition(x, y, z, movetime):
+def SetPWMServoAngle(*args, **kwargs):
+    """Set servo angle"""
+    ret = (True, (), 'SetPWMServoAngle')
+    try:
+        servo_id, angle = args[0], args[1]
+        Board.setPWMServoAngle(servo_id, angle)
+    except Exception as e:
+        print('error3', e)
+        ret = (False, __RPC_E03, 'SetPWMServoAngle')
+    return ret
+
+
+@dispatcher.add_method
+def MoveArmToPosition(*args, **kwargs):
     """Move arm end to position using inverse kinematics"""
     ret = (True, (), 'MoveArmToPosition')
     try:
         AK = ArmIK()
-        # result = arm.setPitchRanges((x, y, z), servo6_angle)
+        x, y, z =  args[0:3]
+        movetime = args[3]
+        
         AK.setPitchRangeMoving((x, y, z), 0,-90, 90, movetime)
     except Exception as e:
         print('error3:', e)

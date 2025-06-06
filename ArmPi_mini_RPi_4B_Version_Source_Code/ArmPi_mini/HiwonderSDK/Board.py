@@ -67,7 +67,7 @@ def getMotor(index):
     index = index - 1
     return __motor_speed[index]
 
-def setPWMServoAngle(index, angle):
+def setPWMServoAngle(servo_id, angle):
     if servo_id < 1 or servo_id > 6:
         raise AttributeError("Invalid Servo ID: %d"%servo_id)
     index = servo_id - 1
